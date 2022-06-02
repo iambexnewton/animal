@@ -1,12 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Homepage from "/Users/beckynewton/Desktop/react-games/animal/src/Pages/Welcome/welcome.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/welcome/welcome.js";
+import Main from "./pages/main/main.js";
+import Interactive from "./pages/interactive/playtime.js";
 
 function App() {
   return (
-    <Router>
-      <Route path="/" exact component={Homepage} />
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+      <Routes>
+        <Route path="/Main" element={<Main />} />
+      </Routes>
+      <Routes>
+        <Route path="/Interactive" element={<Interactive />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
