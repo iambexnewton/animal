@@ -1,15 +1,12 @@
-import butterfly from "./butterfly.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Homepage from "/Users/beckynewton/Desktop/react-games/animal/src/Pages/Welcome/welcome.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={butterfly} className="App-logo" alt="logo" />
-        <p></p>
-        <h1 className="App-title">Animal Party</h1>
-      </header>
-    </div>
+    <Router>
+      <Route path="/" exact component={Homepage} />
+    </Router>
   );
 }
 
