@@ -1,22 +1,18 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/welcome/welcome.js";
 import Main from "./pages/main/main.js";
 import Interactive from "./pages/interactive/playtime.js";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
+        <Route path="/interactive" element={<Interactive />} />
+        <Route path="/main" element={<Main />} />
         <Route path="/" element={<Homepage />} />
       </Routes>
-      <Routes>
-        <Route path="/Main" element={<Main />} />
-      </Routes>
-      <Routes>
-        <Route path="/Interactive" element={<Interactive />} />
-      </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

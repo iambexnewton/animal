@@ -1,10 +1,14 @@
 import React from "react";
+
+import Form from "../../Components/form/form";
 import butterfly from "../../butterfly.svg";
 import { Link } from "react-router-dom";
+import "../../Components/feeding/feeding";
 import "./main.css";
 
 function Main() {
   document.title = "Home";
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +18,7 @@ function Main() {
             <img src={butterfly} className="App-logo" alt="butterfly" />
           </div>
         </Link>
+        <Form />
       </header>
     </div>
   );
